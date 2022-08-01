@@ -7,4 +7,6 @@ map("n", "<Up>", "<Nop>", opts)
 map("n", "<Down>", "<Nop>", opts)
 
 map("i", "<C-l>", "<Esc>$i", opts)
-map("i", "<C-h>", "<Esc>0wi", opts)
+map("i", "<C-h>", "<Esc>0i", opts)
+
+
