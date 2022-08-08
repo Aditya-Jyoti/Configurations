@@ -1,9 +1,12 @@
 set fish_greeting ""
 
 # general aliases
+alias fuck "thefuck"
+alias f "thefuck"
 alias remove "rm -rf $argv"
 alias py "bpython"
-alias password "cd ~/passwords && python3 main.py && cd -"
+alias password "cd ~/.passwords && python3 main.py && cd -"
+alias skc "cd ~/.spotify/controller && source .venv/bin/activate.fish && sudo python3 main.py && deactivate"
 alias bat "batcat $argv"
 alias cof "cd ~/.config/fish && nvim config.fish"
 alias con "cd ~/.config/nvim && nvim ."
@@ -13,6 +16,7 @@ alias ga "git add $argv"
 alias gall "git add ." 
 alias gc "git commit -m $argv" 
 alias gp "git push"
+alias gr "git reset $argv"
 
 function gac 
     set -l options (fish_opt -s f -l file --required-val)
@@ -28,6 +32,12 @@ function gac
 
     git add $files && git commit -m $msg
 end
+
+alias add "git add $argv"
+alias commit "git commit -m $argv"
+alias push "git push"
+alias reset "git reset $argv"
+alias resetall "git reset HEAD~"
 
 # exa aliases 
 alias tree "exa --icons --color=always -s mod -r -T -L 3"
